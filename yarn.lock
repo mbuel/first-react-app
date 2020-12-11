@@ -8918,7 +8918,7 @@ react-dev-utils@^11.0.1:
     strip-ansi "6.0.0"
     text-table "0.2.0"
 
-react-dom@^17.0.1:
+react-dom@17.0.1:
   version "17.0.1"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-17.0.1.tgz#1de2560474ec9f0e334285662ede52dbc5426fc6"
   integrity sha512-6eV150oJZ9U2t9svnsspTMrWNyHc6chX0KzDeAOXftRa8bNeOKTTfCJ7KorIwenkHd2xqVTBTCZd79yk/lx/Ug==
@@ -8932,15 +8932,20 @@ react-error-overlay@^6.0.8:
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-6.0.8.tgz#474ed11d04fc6bda3af643447d85e9127ed6b5de"
   integrity sha512-HvPuUQnLp5H7TouGq3kzBeioJmXms1wHy9EGjz2OURWBp4qZO6AfGEcnxts1D/CbwPLRAgTMPCEgYhA3sEM4vw==
 
+react-is@0.0.0-8e5adfbd7:
+  version "0.0.0-8e5adfbd7"
+  resolved "https://registry.yarnpkg.com/react-is/-/react-is-0.0.0-8e5adfbd7.tgz#8262cb75bb9c0a0b74b3622d028268eccaae0e69"
+  integrity sha512-UmiSc1rQHctttcLkfUY+PHoYyMnNTbRRytbIkQG/tnP1mENIEBdvMtz97/BhXuJt7Mp9D5zD2irq8p8csNa6lw==
+
+"react-is@^16.12.0 || ^17.0.0", react-is@^17.0.1:
+  version "17.0.1"
+  resolved "https://registry.yarnpkg.com/react-is/-/react-is-17.0.1.tgz#5b3531bd76a645a4c9fb6e693ed36419e3301339"
+  integrity sha512-NAnt2iGDXohE5LI7uBnLnqvLQMtzhkiAOLXTmv+qnF9Ky7xAPcX8Up/xWIhxvLVGJvuLiNc4xQLtuqDRzb4fSA==
+
 react-is@^16.8.1:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
-
-react-is@^17.0.1:
-  version "17.0.1"
-  resolved "https://registry.yarnpkg.com/react-is/-/react-is-17.0.1.tgz#5b3531bd76a645a4c9fb6e693ed36419e3301339"
-  integrity sha512-NAnt2iGDXohE5LI7uBnLnqvLQMtzhkiAOLXTmv+qnF9Ky7xAPcX8Up/xWIhxvLVGJvuLiNc4xQLtuqDRzb4fSA==
 
 react-refresh@^0.8.3:
   version "0.8.3"
@@ -9013,7 +9018,25 @@ react-scripts@4.0.1:
   optionalDependencies:
     fsevents "^2.1.3"
 
-react@^17.0.1:
+react-shallow-renderer@^16.13.1:
+  version "16.14.1"
+  resolved "https://registry.yarnpkg.com/react-shallow-renderer/-/react-shallow-renderer-16.14.1.tgz#bf0d02df8a519a558fd9b8215442efa5c840e124"
+  integrity sha512-rkIMcQi01/+kxiTE9D3fdS959U1g7gs+/rborw++42m1O9FAQiNI/UNRZExVUoAOprn4umcXf+pFRou8i4zuBg==
+  dependencies:
+    object-assign "^4.1.1"
+    react-is "^16.12.0 || ^17.0.0"
+
+react-test-renderer@^0.0.0-8e5adfbd7:
+  version "0.0.0-8e5adfbd7"
+  resolved "https://registry.yarnpkg.com/react-test-renderer/-/react-test-renderer-0.0.0-8e5adfbd7.tgz#889ef587c779e0788bbc9dd1de4a0e9d2838bdca"
+  integrity sha512-M9etXQ5nIk9FwJy/00CqjXZV+4nXDZLmg59GcGerSmKoxzptoOni3HiiWu1M4XdQu6Y+cReHfFK26Z/wG81vNw==
+  dependencies:
+    object-assign "^4.1.1"
+    react-is "0.0.0-8e5adfbd7"
+    react-shallow-renderer "^16.13.1"
+    scheduler "0.0.0-8e5adfbd7"
+
+react@17.0.1:
   version "17.0.1"
   resolved "https://registry.yarnpkg.com/react/-/react-17.0.1.tgz#6e0600416bd57574e3f86d92edba3d9008726127"
   integrity sha512-lG9c9UuMHdcAexXtigOZLX8exLWkW0Ku29qPRU8uhF2R9BN96dLCt0psvzPLlHc5OWkgymP3qwTRgbnw5BKx3w==
@@ -9526,6 +9549,14 @@ saxes@^5.0.0:
   integrity sha512-5LBh1Tls8c9xgGjw3QrMwETmTMVk0oFgvrFSvWx62llR2hcEInrKNZ2GZCCuuy2lvWrdl5jhbpeqc5hRYKFOcw==
   dependencies:
     xmlchars "^2.2.0"
+
+scheduler@0.0.0-8e5adfbd7:
+  version "0.0.0-8e5adfbd7"
+  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.0.0-8e5adfbd7.tgz#2ff67c3a13f6cd7336faf8832c4a1cce001e3108"
+  integrity sha512-Q5ipj3teMJXYf+8FTBWyVGSAnRyxXPlGQ5mpS+G56/aKdo9Ky9CM2/g1NCaYJGdnoUTjFpwG/Ws5gD5S7azK4Q==
+  dependencies:
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
 
 scheduler@^0.20.1:
   version "0.20.1"
