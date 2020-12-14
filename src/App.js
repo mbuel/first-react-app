@@ -1,14 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
 import HelloWord from './Components/HelloWorld.js';
-import CounterExample from './Components/CounterExample.js';
+import Header from './Components/header.js';
+import Footer from './Components/Footer.js';
 
 
 function App() {
   return (
     <div>
-      {/* <HelloWord name="Yistchaq"/> */}
-      <CounterExample />
+      <Header/>
+      <HelloWord name="Yistchaq"/>
+      <Footer/>
+      {/* <CounterExample /> */}
     </div>
   );
 }

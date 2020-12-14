@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import App from '../App';
 
 function CounterExample() {
     const [count, setCount] = useState(0);
