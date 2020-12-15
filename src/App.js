@@ -1,15 +1,38 @@
-import HelloWord from './Components/HelloWorld.js';
 import Header from './Components/header.js';
 import Footer from './Components/Footer.js';
+import { BrowserRouter as Router,
+ Switch,
+ Route
+} from 'react-router-dom';
+import About from './Views/About.js'
+import Home from './Views/Home.js'
+import Contact from './Views/Contact.js'
+
 
 
 function App() {
   return (
     <div>
-      <Header/>
-      <HelloWord name="Yistchaq"/>
-      <Footer/>
-      {/* <CounterExample /> */}
+
+
+      <Router>
+        <Header/>
+
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/about">
+           <About />            
+          </Route>
+          <Route path="/contact">
+           <Contact />            
+          </Route>
+        </Switch>
+
+        <Footer/>
+      </Router>
+
     </div>
   );
 }
