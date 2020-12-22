@@ -13,7 +13,7 @@ import Product from './Views/Product.js'
 
 function App() {
   return (
-    <div>
+    <div className="relative pb-10 min-h-screen">
 
 
       <Router>

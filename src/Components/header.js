@@ -4,8 +4,8 @@ import Navigation from './Navigation.js';
 
 function Header() {
     return (
-        <header class='border-b p-3 flex justify-between'>
-            <span class='font-bold'>AppName</span>
+        <header className='border-b p-3 flex justify-between'>
+            <span className='font-bold'>AppName</span>
 
             <Navigation />
         </header>

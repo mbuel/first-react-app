@@ -17,25 +17,25 @@ function Product(props) {
     const url = `https://5fd9442a7e05f000170d369c.mockapi.io/api/v1/products/${index}`;
     const [product, setProduct] = useState({
         loading: false,
-        data: null
+        data: null,
+        error: false
     });
 
-    let content = '';
+    let content = null;
 
     useEffect(()=> {
         setProduct({
             loading: true,
-            data: null
+            data: null,
+            error: false
         })
         axios.get(url)
         .then(response => {
             if (!response || response === "Not found!") {
                 setProduct({
                     loading: false,
-                    data : {
-                        name: "ERROR ID NOT FOUND",
-                        image: '',
-                        description: "error!"}});
+                    data : null,
+                    error: true});
             } else {
                 console.warn(response.data);
                 setProduct({
@@ -45,13 +45,17 @@ function Product(props) {
             }
         }).catch((ex) => {
             setProduct({
-                loading: false,
-                data : {
-                    name: "ERROR ID NOT FOUND",
-                    image: '',
-                    description: "error!"}});
+                    loading: false,
+                    data : null,
+                    error: true})
         });
     }, [url]);
+
+    if (product.error) {
+        content = <p>
+            There was an error in retrieving the data - please refresh the page or try a different ID.
+        </p>
+    }
 
     if (product.loading) {
         content = <Loading />
@@ -81,7 +85,6 @@ function Product(props) {
     return (
         <div>
             {content}
-            
         </div>
 
         
