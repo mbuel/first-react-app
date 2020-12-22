@@ -18,6 +18,11 @@ function NavigationMenu(props) {
                     onClick={props.closeMenu}>About Me</Link>
                 </li>
                 <li>
+                    <Link to="/products/:id" 
+                    className={linkClasses}
+                    onClick={props.closeMenu}>Product List</Link>
+                </li>
+                <li>
                     <Link to="/contact" 
                     className={linkClasses}
                     onClick={props.closeMenu}>Contact info</Link>

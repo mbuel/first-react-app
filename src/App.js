@@ -7,6 +7,7 @@ import { BrowserRouter as Router,
 import About from './Views/About.js'
 import Home from './Views/Home.js'
 import Contact from './Views/Contact.js'
+import Product from './Views/Product.js'
 
 
 
@@ -24,6 +25,9 @@ function App() {
           </Route>
           <Route path="/about">
            <About />            
+          </Route>
+          <Route path="/products/:id">
+           <Product />            
           </Route>
           <Route path="/contact">
            <Contact />            
